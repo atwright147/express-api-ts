@@ -1,0 +1,32 @@
+{
+  "name": "ts-express",
+  "version": "1.0.0",
+  "description": "",
+  "source": "src/server.ts",
+  "main": "dist/server.js",
+  "target": "ESNext",
+  "module": "ESNext",
+  "scripts": {
+    "prebuild": "rimraf dist/*",
+    "build": "microbundle --external=none",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/express": "^4.17.8",
+    "microbundle": "^0.12.4",
+    "rimraf": "^3.0.2",
+    "ts-loader": "^8.0.4",
+    "typescript": "^4.0.3",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-node-externals": "^2.5.2"
+  }
+}
