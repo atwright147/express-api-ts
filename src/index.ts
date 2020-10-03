@@ -6,10 +6,15 @@ const PORT = 3000;
 const app = express();
 
 app.get('/', async (req, res) => {
-    const users = await axios.get('https://jsonplaceholder.typicode.com/users');
-    res.send(users);
+  let users;
+  try {
+    users = await axios.get('https://jsonplaceholder.typicode.com/users');
+  } catch (err) {
+    console.info(err);
+  }
+  res.send(users);
 });
 
 app.listen(PORT, () => {
-    console.log(`Server listening at: http://localhost:${PORT}`);
+  console.log(`Server listening at: http://localhost:${PORT}`);
 });
