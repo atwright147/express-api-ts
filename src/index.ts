@@ -5,7 +5,11 @@ const PORT = 3000;
 
 const app = express();
 
-app.get('/', async (req, res) => {
+app.get('/', (req, res) => {
+  res.send('hey');
+});
+
+app.get('/users', async (req, res) => {
   let users;
   try {
     users = await axios.get('https://jsonplaceholder.typicode.com/users');
